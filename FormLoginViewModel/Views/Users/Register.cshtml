@@ -1,0 +1,28 @@
+﻿@model UsersRegisterViewModel
+
+<h1>Register</h1>
+<span class="text-danger">@ViewBag.Error</span>
+<form asp-controller="Users" asp-action="Register" method="post">
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="Firstname"></label>
+        <input asp-for="Firstname" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="Lastname"></label>
+        <input asp-for="Lastname" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="Password"></label>
+        <input type="password" asp-for="Password" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="PasswordCompare"></label>
+        <input type="password" asp-for="PasswordCompare" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
